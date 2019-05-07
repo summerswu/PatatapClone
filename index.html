@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Circle</title>
+    <script type="text/javascript" src="paper-full.js"></script>
+    <script type="text/paperscript" canvas="canvas">
+
+    function onKeyDown(event){
+        var maxPoint = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
+
+    	var circle = new Path.Circle(point, 10);
+    	circle.fillColor = "purple";
+    }	
+
+    </script>
+</head>
+<body>
+    <canvas id="canvas" resize style="background:black; position:absolute;
+    width:100%;
+    height:100%;" ></canvas>
+</body>
+</html>
